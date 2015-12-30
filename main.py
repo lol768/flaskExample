@@ -9,8 +9,8 @@ def homepage(): # Function to return the response for the homepage
 
 @app.route("/doSomething")
 def do_something():
-    time.sleep(5)
-    return redirect(url_for('homepage'))
+    time.sleep(5) # you'd have some 'real' code in here - e.g. GPIO calls
+    return redirect(url_for('homepage')) # url_for gets the URL based on the function name
 
 # Only do the webserver stuff if we're being run directly from the CLI
 if __name__ == "__main__":
